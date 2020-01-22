@@ -1,7 +1,7 @@
 package com.scs.soft.zhihu.api.mapper;
 
 import com.scs.soft.zhihu.api.ZhihuApiApplication;
-import com.scs.soft.zhihu.api.entity.RoundTable;
+import com.scs.soft.zhihu.api.entity.Favorite;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -10,19 +10,19 @@ import java.util.List;
 import java.util.Map;
 
 @SpringBootTest(classes = ZhihuApiApplication.class)
-class RoundTableMapperTest {
+class FavoriteMapperTest {
     @Resource
-    private RoundTableMapper roundTableMapper;
+    private FavoriteMapper favoriteMapper;
 
     @Test
     void selectRecent() {
-        List<RoundTable> roundTables = roundTableMapper.selectRecent();
-        roundTables.forEach(System.out::println);
+        List<Favorite> favorites = favoriteMapper.selectRecent();
+        favorites.forEach(System.out::println);
     }
 
     @Test
     void selectAll() {
-        List<Map> roundTables = roundTableMapper.selectAll();
-        roundTables.forEach(System.out::println);
+        List<Map> favorites = favoriteMapper.selectAll();
+        favorites.forEach(System.out::println);
     }
 }

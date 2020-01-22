@@ -14,7 +14,7 @@ public interface RoundTableMapper {
      * 查询最新专辑
      * @return List<RoundTable>
      */
-    @Select("SELECT * FROM t_round_table ORDER BY visits_count DESC LIMIT 0,4 ")
+    @Select("SELECT * FROM t_round_table ORDER BY visits_count DESC LIMIT 0,4")
     List<RoundTable> selectRecent();
 
     /**
